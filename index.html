@@ -19,6 +19,7 @@
     <section class="stage-wrap">
       <div class="stage-label"><span id="frameLabel">Frame 1</span><span id="fpsLabel">12 FPS</span></div>
       <div id="stage" class="stage" aria-label="TRACE animation stage">
+        <img id="backgroundImage" class="background-image" alt="Scene background">
         <div class="room">
           <div class="window"></div><div class="desk"></div><div class="monitor"></div>
         </div>
@@ -32,8 +33,11 @@
     </section>
 
     <section class="controls">
-      <label>Import a character PNG
+      <label>Import character PNG
         <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp">
+      </label>
+      <label>Import background
+        <input id="backgroundInput" type="file" accept="image/png,image/jpeg,image/webp">
       </label>
       <button id="resetBtn">Reset Maya</button>
       <button id="clearBtn">Clear animation</button>
