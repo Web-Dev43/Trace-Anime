@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>TRACE — Animation Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="eyebrow">TRACE</div>
+      <h1>Animation Lab</h1>
+    </div>
+    <button id="playBtn" class="primary">▶ Play</button>
+  </header>
+
+  <main>
+    <section class="stage-wrap">
+      <div class="stage-label"><span id="frameLabel">Frame 1</span><span id="fpsLabel">12 FPS</span></div>
+      <div id="stage" class="stage" aria-label="TRACE animation stage">
+        <div class="room">
+          <div class="window"></div><div class="desk"></div><div class="monitor"></div>
+        </div>
+        <div id="maya" class="maya" tabindex="0" aria-label="Maya">
+          <div class="hair"></div><div class="head"></div><div class="body"></div>
+          <div class="arm left"></div><div class="arm right"></div>
+          <div class="leg left"></div><div class="leg right"></div>
+        </div>
+      </div>
+      <div class="hint">Tap Maya, then drag her. Each frame stores its own position.</div>
+    </section>
+
+    <section class="controls">
+      <label>Import a character PNG
+        <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp">
+      </label>
+      <button id="resetBtn">Reset Maya</button>
+      <button id="clearBtn">Clear animation</button>
+    </section>
+
+    <section class="timeline">
+      <div class="timeline-head">
+        <strong>Timeline</strong>
+        <span id="status" aria-live="polite">Frame 1 / 10</span>
+      </div>
+      <div id="frames" class="frames"></div>
+      <div class="timeline-actions">
+        <button id="prevBtn">← Prev</button>
+        <button id="nextBtn">Next →</button>
+        <button id="addBtn" class="primary">＋ Add frame</button>
+      </div>
+    </section>
+
+    <section class="body-parts">
+      <strong>Body-part mode</strong>
+      <p>Prototype: choose a part to prepare for independent animation.</p>
+      <div id="parts">
+        <button data-part="all" class="selected">Whole body</button>
+        <button data-part="head">Head</button><button data-part="leftArm">Left arm</button>
+        <button data-part="rightArm">Right arm</button><button data-part="leftLeg">Left leg</button>
+        <button data-part="rightLeg">Right leg</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
